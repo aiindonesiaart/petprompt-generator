@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>Pet Prompt Generator</h1>
+        <p>Get inspired with random pet-related ideas!</p>
+    </header>
+
+    <div class="controls">
+        <div class="pet-type-selector">
+            <label for="pet-type">Pet Type:</label>
+            <select id="pet-type">
+                <option value="all">All Pets</option>
+                <option value="dog">Dogs</option>
+                <option value="cat">Cats</option>
+                <option value="bird">Birds</option>
+                <option value="fish">Fish</option>
+                <option value="reptile">Reptiles</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <div class="category-selector">
+            <label>Category:</label>
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="writing">Writing</button>
+            <button class="category-btn" data-category="drawing">Drawing</button>
+            <button class="category-btn" data-category="activity">Activities</button>
+        </div>
+        
+        <button id="generate-btn">Generate Prompt</button>
+    </div>
+
+    <div class="prompt-display">
+        <div class="prompt-card">
+            <p class="prompt-text">Click "Generate Prompt" to get started!</p>
+            <div class="prompt-meta">
+                <span class="pet-type-tag all">All</span>
+                <span class="category-tag all">All</span>
+            </div>
+            <button class="save-btn">Save</button>
+        </div>
+    </div>
+
+    <div class="saved-prompts">
+        <button class="toggle-saved">Saved Prompts (<span class="saved-count">0</span>)</button>
+        <div class="saved-list hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
